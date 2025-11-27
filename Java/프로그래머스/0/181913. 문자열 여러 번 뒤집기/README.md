@@ -1,6 +1,6 @@
 # [level 0] 문자열 여러 번 뒤집기 - 181913 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181913?language=java) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181913) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2025년 11월 27일 16:40:09
+2025년 11월 27일 16:40:15
 
 ### 문제 설명
 
