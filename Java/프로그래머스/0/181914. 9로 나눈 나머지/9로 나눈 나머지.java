@@ -1,8 +1,6 @@
-import java.math.BigInteger;
-
 class Solution {
   public int solution(String number) {
-      BigInteger num = new BigInteger(number);
-      return num.mod(BigInteger.valueOf(9)).intValue();
+    return number.codePoints().map(c -> (c -'0') % 9).sum() % 9;
   }
 }
+
