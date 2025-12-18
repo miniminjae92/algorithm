@@ -1,16 +1,17 @@
 class Solution {
     public int solution(int[] num_list) {
-        int result = 0;
         if (num_list.length >= 11) {
+            int sum = 0;
             for (int n : num_list) {
-                result += n;
+                sum += n;
             }
-        } else {
-            result = 1;
-            for (int n : num_list) {
-                result *= n;
-            }
-        } 
-        return result;
+            return sum;
+        }
+
+        int product = 1;
+        for (int n : num_list) {
+            product *= n;
+        }
+        return product;
     }
 }
