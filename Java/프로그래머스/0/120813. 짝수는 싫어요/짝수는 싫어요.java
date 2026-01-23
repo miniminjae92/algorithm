@@ -1,6 +1,7 @@
 class Solution {
     public int[] solution(int n) {
-        int[] answer = new int[(int)Math.ceil((double)n / 2)];
+        int size = (n + 1) / 2;
+        int[] answer = new int[size];
         int index = 0;
         for (int i = 1; i <= n; i += 2) {
             answer[index++] = i;
