@@ -8,39 +8,27 @@ import java.util.StringTokenizer;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder buffer = new StringBuilder();
         String input = br.readLine();
         Deque<Integer> stack = new ArrayDeque<>();
         int round = Integer.parseInt(input);
-        int i = 0;
-        while (i < round) {
+        for (int i = 0; i < round; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             String command = st.nextToken();
             if (command.equals("push")) {
                 stack.addLast(Integer.parseInt(st.nextToken()));
             } else if (command.equals("pop")) {
                 Integer value = stack.pollLast();
-                if (value == null) {
-                    value = -1;
-                }
-                System.out.println(value);
+                buffer.append(value == null ? -1 : value).append(System.lineSeparator());
             } else if (command.equals("size")) {
-                System.out.println(stack.size());
+                buffer.append(stack.size()).append(System.lineSeparator());
             } else if (command.equals("empty")) {
-                if (stack.isEmpty()) {
-                    System.out.println("1");
-                    i++;
-                    continue;
-                }
-                System.out.println("0");
+                buffer.append(stack.isEmpty() ? "1" : "0").append(System.lineSeparator());
             } else if (command.equals("top")) {
-                if (stack.isEmpty()) {
-                    System.out.println("-1");
-                    i++;
-                    continue;
-                }
-                System.out.println(stack.getLast());
+                Integer value = stack.peekLast();
+                buffer.append(value == null ? "-1" : value).append(System.lineSeparator());
             }
-            i++;
         }
+        System.out.println(buffer);
     }
 }
