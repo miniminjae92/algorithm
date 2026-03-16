@@ -19,14 +19,14 @@ public class Main {
                 stack.addLast(Integer.parseInt(st.nextToken()));
             } else if (command.equals("pop")) {
                 Integer value = stack.pollLast();
-                buffer.append(value == null ? -1 : value).append(System.lineSeparator());
+                buffer.append(value == null ? -1 : value).append("\n");
             } else if (command.equals("size")) {
-                buffer.append(stack.size()).append(System.lineSeparator());
+                buffer.append(stack.size()).append("\n");
             } else if (command.equals("empty")) {
-                buffer.append(stack.isEmpty() ? "1" : "0").append(System.lineSeparator());
+                buffer.append(stack.isEmpty() ? "1" : "0").append("\n");
             } else if (command.equals("top")) {
                 Integer value = stack.peekLast();
-                buffer.append(value == null ? "-1" : value).append(System.lineSeparator());
+                buffer.append(value == null ? "-1" : value).append("\n");
             }
         }
         System.out.println(buffer);
