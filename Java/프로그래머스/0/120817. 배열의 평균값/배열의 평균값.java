@@ -1,9 +1,10 @@
+import java.util.*;
+
 class Solution {
     public double solution(int[] numbers) {
-        double answer = 0;
-        for (int number : numbers) {
-            answer += number;
-        }
-        return answer / numbers.length;
+        double sum = Arrays.stream(numbers)
+            .mapToDouble(n -> n)
+            .sum();
+        return sum / numbers.length;
     }
 }
