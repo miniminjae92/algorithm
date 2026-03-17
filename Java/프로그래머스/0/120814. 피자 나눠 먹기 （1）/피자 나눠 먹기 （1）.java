@@ -1,9 +1,9 @@
 class Solution {
     public int solution(int n) {
-        int pizza = n / 7;
-        if ( n % 7 != 0) {
-            pizza++;
+        int answer = n / 7;
+        if (n % 7 != 0) {
+            answer++;
         }
-        return pizza;
+        return answer;
     }
 }
